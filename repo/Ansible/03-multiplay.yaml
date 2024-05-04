@@ -16,6 +16,6 @@
 - name: PLAY-3
   hosts: localhost
   tasks:
-  - name:PLAY-3 and TASK-3
+  - name: PLAY-3 and TASK-3
     ansible.builtin.debug:
      msg:"Hello, I am from PLAY-3 and TASK-3"
