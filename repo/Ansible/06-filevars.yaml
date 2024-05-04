@@ -1,8 +1,8 @@
-- name: Taking variables from files
+- name: variables from files
   hosts: localhost
-  var_files:
+  vars_files:
   - vars.yaml
   tasks:
-  - name: This task will take variables from file and print here
-    ansible.bultin.debug:
-      msg: "Hi we are learning {{Course}} from {{Trainer}} and my name is {{Student}} and it's duration is {{Duration}}"
+  - name: print override information
+    ansible.builtin.debug:
+      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
