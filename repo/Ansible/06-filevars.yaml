@@ -1,0 +1,8 @@
+- name: Taking variables from files
+  host: localhost
+  vars:
+  - vars.yaml
+  tasks:
+  - name: This task will take variables from file and print here
+    ansible.bultin.debug:
+     msg: "Hi we are learning {{Course}} from {{Trainer}} and my name is {{Student}} and it's duration is {{Duration}}"
