@@ -1,0 +1,10 @@
+- name: Take command line args
+  hosts: localhost
+  vars:
+   numbers: [LIST]
+  tasks:
+  - name : Take input from user
+    ansible.builtin.debug:
+    prompt: "Please enter the numbers:"
+    private: false
+     msg: "The List user entered is {{LIST}}"
