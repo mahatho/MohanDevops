@@ -7,4 +7,4 @@
     ansible.builtin.debug:
      prompt: "Please enter the numbers:"
      private: false
-     msg: "The List user entered is {{LIST}}"
+      msg : "The List user entered is {{LIST}}"
