@@ -1,0 +1,10 @@
+- name: Multiplaybooks
+  host: localhost
+  tasks: 
+  - name: Play1 and task 1
+    ansible.builtin.debug:
+     msg: "Hi i am from play1 in task 1"
+  
+  - name: Play2 and task 2
+    ansible.builtin.debug:
+     msg: "Hi i am from play2 in task 2"
