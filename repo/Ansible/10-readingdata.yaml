@@ -1,7 +1,7 @@
 - name: Take command line args
   hosts: localhost
   vars:
-  - name: [LIST]
+  - name: LIST
     prompt: "Please enter the LIST values:"
     private: false
     
