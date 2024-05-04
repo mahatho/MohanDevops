@@ -2,10 +2,10 @@
   hosts: localhost
   vars:
   - name: LIST
-    prompt: "Please enter the LIST values:"
+    prompt: "Please enter the values:"
     private: false
     
   tasks:
-  - name : Take input from user
+  - name : Print input from user
     ansible.builtin.debug:
-     msg: "The List user entered is {{LIST}}"
+     msg: "The List user entered is: {{LIST}}"
