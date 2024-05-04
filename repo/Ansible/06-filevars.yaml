@@ -1,5 +1,5 @@
 - name: Taking variables from files
-  host: localhost
+  hosts: localhost
   var_files:
   - vars.yaml
   tasks:
