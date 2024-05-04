@@ -10,10 +10,10 @@
     ansible.builtin.debug:
      msg: "Hi we are learning {{Course}} from {{Trainer}} and my name is {{Student}} and it's duration is {{Duration}}"
 
-  tasks:
-  - name: This is overrided variable declaration at task level
+
+  - name: This is overrided variable declaration declared in task level
     vars:
      Course: "Teraform"
      Duration: "1 Week"
     ansible.builtin.debug:
-     msg: "Hi we are learning {{Course}} from {{Trainer}} and my name is {{Student}} and it's duration is {{Duration}}"   
+     msg: "Hi we are learning {{Course}} from {{Trainer}} and my name is {{Student}} and it's duration is {{Duration}}"      
