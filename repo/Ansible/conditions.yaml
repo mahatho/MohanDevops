@@ -4,6 +4,7 @@
   tasks:
   - name: checking for user id
     ansible.builtin.command: id expense
+    ignore_errors: true
 
   - name: print the info
     ansible.builtin.debug:
