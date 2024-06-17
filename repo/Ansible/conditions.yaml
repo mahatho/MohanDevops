@@ -1,0 +1,10 @@
+- name: conditional practice
+  hosts: web
+  become: true
+  tasks:
+  - name: checking for user id
+    ansible.builtin.command: id expense
+
+  - name: print the msg
+    ansible .builtin.debug:
+     msg: "Hello World"
