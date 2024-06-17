@@ -5,6 +5,6 @@
   - name: checking for user id
     ansible.builtin.command: id expense
 
-  - name: print the msg
-    ansible .builtin.debug:
+  - name: print the info
+    ansible.builtin.debug:
       msg: "Hello World"
