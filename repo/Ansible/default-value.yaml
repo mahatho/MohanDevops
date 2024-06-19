@@ -8,7 +8,7 @@
   tasks:
   - name: printing dict before changing to items
     ansible.builtin.debug:
-     msg: "MY Dict is {{ my_dict }}"
+     msg: "Before chainging : {{ my_dict }}"
   - name: printing the dict after changing to items
     ansible.builtin.debug:
-     msg: "My Dict is {{ my-dict | dict2items }}"   
+     msg: "After changing : {{ my-dict | dict2items }}"   
