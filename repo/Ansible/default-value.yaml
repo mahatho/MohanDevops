@@ -9,9 +9,14 @@
     vars: 
       numbers : [1,2,3,3,4,4,4,5]
     ansible.builtin.debug:
-     msg: "{{numbers | unique }}"
+     msg: "{{ numbers | unique }}"
 
-  - name: change the case of text
-    ansible.builtin.debug: 
-     msg: {{value | upper}}
-     msg: {{value | lower}}    
+  - name: lower case
+    hosts: localhost
+    vars:
+      greeting: "Hello, Good Morning"
+    tasks:
+    - name: convert into lowercase
+      ansible.builtin.debug:
+        msg: "{{ greeting | lower }}"
+    
