@@ -1,22 +1,14 @@
-- name: Default value
+- name: Print dict items
   hosts: localhost
+  vars: 
+   my_dict : 
+    Course : "DevOps"
+    Trainer: "Shiva"
+    Duration : "120hrs"
   tasks:
-  - name: Printing the default value
-    ansible.builtin.debug: 
-      msg: "Hello {{Course | default('DevOps')}}"
-
-  - name: printing unique values
-    vars: 
-      numbers : [1,2,3,3,4,4,4,5]
+  - name: printing dict before changing to items
     ansible.builtin.debug:
-     msg: "{{ numbers | unique }}"
-
-  - name: Lower case
-    hosts: localhost
-    vars:
-     greeting: "Hello, Good Morning"
-    tasks:
-    - name: convert into lowercase
-      ansible.builtin.debug:
-        msg: "{{ greeting | lower }}"
-    
+     msg: "MY Dict is {{ my_dict }}"
+  - name: printing the dict after changing to items
+    ansible.builtin.debug:
+     msg: "My Dict is {{ my-dict | dict2items }}"   
