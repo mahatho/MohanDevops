@@ -12,8 +12,6 @@
      msg: "{{numbers | unique }}"
 
   - name: change the case of text
-    vars:
-      value : "Mohan"
     ansible.builtin.debug: 
      msg: {{value | upper}}
      msg: {{value | lower}}    
