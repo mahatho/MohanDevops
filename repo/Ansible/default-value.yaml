@@ -11,4 +11,4 @@
      msg: "Before chainging : {{ my_dict }}"
   - name: printing the dict after changing to items
     ansible.builtin.debug:
-     msg: "After changing : {{ my-dict | dict2items }}"   
+     msg: "After changing : {{ my_dict | dict2items }}"   
