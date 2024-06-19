@@ -12,3 +12,18 @@
   - name: printing the dict after changing to items
     ansible.builtin.debug:
      msg: "After changing : {{ my_dict | dict2items }}"   
+
+- name: Print items from dict
+  hosts: localhost
+  vars:
+   my_list :
+    - {'key': 'Course' , 'value': 'DevOps'}
+    - {'key': 'Trainer' , 'value': 'Shiva'} 
+    - {'key': 'Duration' , 'value': '120hrs'} 
+  tasks: 
+  - name: printing items before changing to dict
+    ansible.builtin.debug:
+     msg: "Before chainging : {{ my_list }}"
+  - name: printing the items after changing to dict
+    ansible.builtin.debug:
+     msg: "After changing : {{ my_list | items2dict }}" 
