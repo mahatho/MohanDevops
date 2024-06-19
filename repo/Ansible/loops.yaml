@@ -1,10 +1,11 @@
-- name: Loop example
-  hosts: localhost
+- name: Loop example of installations
+  hosts: web
   tasks:
-  - name: Printing the names on loop
-    ansible.builtin.debug:
-     msg: "Hi {{item}}"
+  - name: Installing packages on loop
+    ansible.builtin.dnf:
+     name: "{{ item }}"
+     state: latest
     loop:
-    - Mohan
-    - Rohan
-    - Shiva
+    - nginx
+    - ansible
+    - mysql
