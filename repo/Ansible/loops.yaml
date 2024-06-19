@@ -3,7 +3,7 @@
   tasks:
   - name: Printing the names on loop
     ansible.builtin.debug:
-     msg: "Hi {{itam}}"
+     msg: "Hi {{item}}"
     loop:
     - Mohan
     - Rohan
