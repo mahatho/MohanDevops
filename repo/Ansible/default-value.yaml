@@ -1,6 +1,6 @@
-- name: Print the Default value
+- name: Default value
   hosts: localhost
   tasks:
   - name: Printing the default value
-    ansible.bultin.debug:
+    ansible.builtin.debug: 
       msg: "Hello {{Course | default('DevOps')}}"
