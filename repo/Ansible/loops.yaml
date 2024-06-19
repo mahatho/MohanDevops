@@ -1,5 +1,6 @@
 - name: Loop example of installations
   hosts: web
+  become: yes
   tasks:
   - name: Installing packages on loop
     ansible.builtin.dnf:
