@@ -7,13 +7,13 @@
 
   - name: printing unique values
     vars: 
-      numbers = [1,2,3,3,4,4,4,5]
+      numbers : [1,2,3,3,4,4,4,5]
     ansible.builtin.debug:
      msg: "{{numbers | unique }}"
 
   - name: change the case of text
     vars:
-      value = "Mohan"
+      value : "Mohan"
     ansible.builtin.debug: 
      msg: {{value | upper}}
      msg: {{value | lower}}    
