@@ -1,5 +1,5 @@
 - name: install and run nginx
-  hosts: web
+  hosts: localhost
   become: yes #for root access
   tasks:
   - name: install and run nginx
