@@ -8,22 +8,24 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
+echo "Script started executing at: $TIMESTAMP"
+
 VALIDATE(){
    if [ $1 -ne 0 ]
    then
-        echo "$2...$R FAILURE $N"
+        echo -e "$2...$R FAILURE $N"
         exit 1
     else
-        echo "$2...$G SUCCESS $N"
+        echo -e "$2...$G SUCCESS $N"
     fi
 }
 
 if [ $USERID -ne 0 ]
 then
-    echo "Please run this script with root access. $Y"
+    echo "Please run this script with root access."
     exit 1 # manually exit if error comes.
 else
-    echo "$G You are super user. $N"
+    echo "You are super user."
 fi
 
 dnf install mysql -y &>>$LOGFILE
@@ -31,3 +33,6 @@ VALIDATE $? "Installing MySQL"
 
 dnf install git -y &>>$LOGFILE
 VALIDATE $? "Installing Git"
+
+dnf install dockerr -y &>>$LOGFILE
+VALIDATE $? "Installing Docker"
