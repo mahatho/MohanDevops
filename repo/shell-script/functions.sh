@@ -11,10 +11,10 @@ N="\e[0m"
 VALIDATE(){
    if [ $1 -ne 0 ]
    then
-        echo "$2...FAILURE $R"
+        echo "$2...$R FAILURE $N"
         exit 1
     else
-        echo "$2...SUCCESS $G"
+        echo "$2...$G SUCCESS $N"
     fi
 }
 
@@ -23,7 +23,7 @@ then
     echo "Please run this script with root access. $Y"
     exit 1 # manually exit if error comes.
 else
-    echo "You are super user. $G"
+    echo "$G You are super user. $N"
 fi
 
 dnf install mysql -y &>>$LOGFILE
