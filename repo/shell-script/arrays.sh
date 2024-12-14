@@ -1,5 +1,5 @@
 #!/bin/bash
 
-MOVIES=("RRR" "BAHUBALI" "KALKI")
+MOVIES=("RRR" "BAHUBALI" "EEGA")
 
-echo "First Movie is : ${MOVIES[@]}"
+echo "Rajamouli Movies are : ${MOVIES[@]}"
