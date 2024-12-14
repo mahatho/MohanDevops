@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SERVERIP=<54.224.178.57>
+SERVERIP="54.224.178.57"
 NOTIFYEMAIL=test@example.com
 
 ping -c 3 $SERVERIP > /dev/null 2>&1
